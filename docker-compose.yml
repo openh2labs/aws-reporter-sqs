@@ -1,0 +1,11 @@
+version: "1"
+
+services:
+ php-fpm:
+    container_name: aws-reporter-sqs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: quay.io/cashrewards/tabletennis:local
+    volumes:
+     - ./:/var/www/html
